@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83F252122722404B00CCCC44 /* RecipeListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F252112722404B00CCCC44 /* RecipeListApp.swift */; };
+		83F252122722404B00CCCC44 /* RecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F252112722404B00CCCC44 /* RecipeApp.swift */; };
 		83F252142722404B00CCCC44 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F252132722404B00CCCC44 /* RecipeListView.swift */; };
 		83F252162722404D00CCCC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F252152722404D00CCCC44 /* Assets.xcassets */; };
 		83F252192722404D00CCCC44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F252182722404D00CCCC44 /* Preview Assets.xcassets */; };
@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83F2520E2722404B00CCCC44 /* Recipe List App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe List App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83F252112722404B00CCCC44 /* RecipeListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListApp.swift; sourceTree = "<group>"; };
+		83F2520E2722404B00CCCC44 /* Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F252112722404B00CCCC44 /* RecipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeApp.swift; sourceTree = "<group>"; };
 		83F252132722404B00CCCC44 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		83F252152722404D00CCCC44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83F252182722404D00CCCC44 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -28,7 +28,7 @@
 		83F252262722416E00CCCC44 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		83F252282722418000CCCC44 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		83F2522A2722452B00CCCC44 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		83F2522C27224F5E00CCCC44 /* Recipe List App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recipe List App.entitlements"; sourceTree = "<group>"; };
+		83F2522C27224F5E00CCCC44 /* Recipe App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recipe App.entitlements"; sourceTree = "<group>"; };
 		83F2522D2722588700CCCC44 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +46,7 @@
 		83F252052722404B00CCCC44 = {
 			isa = PBXGroup;
 			children = (
-				83F252102722404B00CCCC44 /* Recipe List App */,
+				83F252102722404B00CCCC44 /* Recipe App */,
 				83F2520F2722404B00CCCC44 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,16 +54,16 @@
 		83F2520F2722404B00CCCC44 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83F2520E2722404B00CCCC44 /* Recipe List App.app */,
+				83F2520E2722404B00CCCC44 /* Recipe App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		83F252102722404B00CCCC44 /* Recipe List App */ = {
+		83F252102722404B00CCCC44 /* Recipe App */ = {
 			isa = PBXGroup;
 			children = (
-				83F2522C27224F5E00CCCC44 /* Recipe List App.entitlements */,
-				83F252112722404B00CCCC44 /* RecipeListApp.swift */,
+				83F2522C27224F5E00CCCC44 /* Recipe App.entitlements */,
+				83F252112722404B00CCCC44 /* RecipeApp.swift */,
 				83F2521F2722408B00CCCC44 /* Views */,
 				83F252212722409200CCCC44 /* View Models */,
 				83F252202722408E00CCCC44 /* Models */,
@@ -72,7 +72,7 @@
 				83F252152722404D00CCCC44 /* Assets.xcassets */,
 				83F252172722404D00CCCC44 /* Preview Content */,
 			);
-			path = "Recipe List App";
+			path = "Recipe App";
 			sourceTree = "<group>";
 		};
 		83F252172722404D00CCCC44 /* Preview Content */ = {
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83F2520D2722404B00CCCC44 /* Recipe List App */ = {
+		83F2520D2722404B00CCCC44 /* Recipe App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83F2521C2722404D00CCCC44 /* Build configuration list for PBXNativeTarget "Recipe List App" */;
+			buildConfigurationList = 83F2521C2722404D00CCCC44 /* Build configuration list for PBXNativeTarget "Recipe App" */;
 			buildPhases = (
 				83F2520A2722404B00CCCC44 /* Sources */,
 				83F2520B2722404B00CCCC44 /* Frameworks */,
@@ -139,9 +139,9 @@
 			);
 			dependencies = (
 			);
-			name = "Recipe List App";
+			name = "Recipe App";
 			productName = "Recipe List App";
-			productReference = 83F2520E2722404B00CCCC44 /* Recipe List App.app */;
+			productReference = 83F2520E2722404B00CCCC44 /* Recipe App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +159,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83F252092722404B00CCCC44 /* Build configuration list for PBXProject "Recipe List App" */;
+			buildConfigurationList = 83F252092722404B00CCCC44 /* Build configuration list for PBXProject "Recipe App" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83F2520D2722404B00CCCC44 /* Recipe List App */,
+				83F2520D2722404B00CCCC44 /* Recipe App */,
 			);
 		};
 /* End PBXProject section */
@@ -199,7 +199,7 @@
 				83F2522E2722588700CCCC44 /* RecipeDetailView.swift in Sources */,
 				83F252292722418000CCCC44 /* RecipeModel.swift in Sources */,
 				83F252142722404B00CCCC44 /* RecipeListView.swift in Sources */,
-				83F252122722404B00CCCC44 /* RecipeListApp.swift in Sources */,
+				83F252122722404B00CCCC44 /* RecipeApp.swift in Sources */,
 				83F2522B2722452B00CCCC44 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,8 +346,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = None.RecipeListApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = None.RecipeApp;
+				PRODUCT_NAME = "Recipe App";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -378,8 +378,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = None.RecipeListApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = None.RecipeApp;
+				PRODUCT_NAME = "Recipe App";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -390,7 +390,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83F252092722404B00CCCC44 /* Build configuration list for PBXProject "Recipe List App" */ = {
+		83F252092722404B00CCCC44 /* Build configuration list for PBXProject "Recipe App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83F2521A2722404D00CCCC44 /* Debug */,
@@ -399,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83F2521C2722404D00CCCC44 /* Build configuration list for PBXNativeTarget "Recipe List App" */ = {
+		83F2521C2722404D00CCCC44 /* Build configuration list for PBXNativeTarget "Recipe App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83F2521D2722404D00CCCC44 /* Debug */,

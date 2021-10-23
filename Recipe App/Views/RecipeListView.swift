@@ -10,27 +10,47 @@ import SwiftUI
 struct RecipeListView: View
 {
     @ObservedObject var model = RecipeModel()
-//    @State var nCount = 0
+//    @State var tabIndex = 1
     
     var body: some View
     {
-        NavigationView
-        {
-            List(model.recipes)
-            { recipe in
-                NavigationLink(destination: RecipeDetailView(recipe: recipe),
-                label:
-                {
-                    HStack(spacing: 20.0)
+//        TabView (selection: $tabIndex)
+//        {
+            NavigationView
+            {
+                List(model.recipes)
+                { recipe in
+                    NavigationLink(destination: RecipeDetailView(recipe: recipe),
+                    label:
                     {
-                        Image(recipe.image).resizable().scaledToFill().cornerRadius(15).frame(width: 50, height:50, alignment: .center).clipped()
-                        Text(recipe.name)
-                    }
+                        HStack(spacing: 20.0)
+                        {
+                            Image(recipe.image).resizable().scaledToFill().cornerRadius(15).frame(width: 50, height:50, alignment: .center).clipped()
+                            Text(recipe.name)
+                        }
 
-                })
+                    })
 
-            }.navigationTitle("Recipe List")
-        }
+                }.navigationTitle("Recipe List")
+            }
+//            .tabItem
+//            {
+//                VStack
+//                {
+//                    Image(systemName: "list.dash")
+//                    Text("List")
+//                }
+//            }.tag(1)
+//
+//            Text("Hello World").tabItem
+//            {
+//                VStack
+//                {
+//                    Image(systemName: "pencil")
+//                    Text("List")
+//                }
+//            }.tag(2)
+//        }
     }
 }
 

@@ -14,7 +14,7 @@ struct RecipeApp: App
     {
         WindowGroup
         {
-            RecipeListView()
+            RecipeTabView()
         }
     }
 }

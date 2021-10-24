@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeListView: View
 {
     @EnvironmentObject var model:RecipeModel
+    @Environment(\.colorScheme) var colorScheme
 //    @State var tabIndex = 1
     
     var body: some View
@@ -18,20 +19,33 @@ struct RecipeListView: View
 //        {
             NavigationView
             {
-                List(model.recipes)
-                { recipe in
-                    NavigationLink(destination: RecipeDetailView(recipe: recipe),
-                    label:
+                VStack(alignment: .leading)
+                {
+                    Text("All Recipes").bold().font(.largeTitle).padding(.top, 40)
+                    
+                    ScrollView
                     {
-                        HStack(spacing: 20.0)
+                        
+                        LazyVStack(alignment: .leading)
                         {
-                            Image(recipe.image).resizable().scaledToFill().cornerRadius(15).frame(width: 50, height:50, alignment: .center).clipped()
-                            Text(recipe.name)
+                            ForEach(model.recipes)
+                            { recipe in
+                                NavigationLink(destination: RecipeDetailView(recipe: recipe),
+                                label:
+                                {
+                                    HStack(spacing: 20.0)
+                                    {
+                                        Image(recipe.image).resizable().scaledToFill().clipped().frame(width: 50, height:50, alignment: .center).cornerRadius(10)
+                                        Text(recipe.name).foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                                    }
+
+                                })
+
+                            }.navigationBarHidden(true)
                         }
-
-                    })
-
-                }.navigationTitle("Recipe List")
+                    }
+                }.padding(.leading)
+//                .navigationTitle("Recipe List")
             }
 //            .tabItem
 //            {
@@ -57,6 +71,6 @@ struct RecipeListView: View
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View
     {
-        RecipeListView()
+        RecipeListView().environmentObject(RecipeModel())
     }
 }

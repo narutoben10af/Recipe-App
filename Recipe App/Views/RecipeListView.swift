@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecipeListView: View
 {
-    @ObservedObject var model = RecipeModel()
+    @EnvironmentObject var model:RecipeModel
 //    @State var tabIndex = 1
     
     var body: some View

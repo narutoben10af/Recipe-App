@@ -39,9 +39,9 @@ struct RecipeDetailView: View
                 VStack(alignment: .leading)
                 {
                     Text("Ingredients").font(.headline).fontWeight(.semibold).padding(.vertical, 5)
-                    ForEach(recipe.ingredients, id: \.self)
+                    ForEach(recipe.ingredients)
                     {item in
-                        Text("• " + item).padding(.bottom, 1)
+                        Text("• " + item.name).padding(.bottom, 1)
                     }
                 }.padding(.horizontal)
                     

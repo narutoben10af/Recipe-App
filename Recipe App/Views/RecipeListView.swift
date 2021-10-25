@@ -21,22 +21,29 @@ struct RecipeListView: View
             {
                 VStack(alignment: .leading)
                 {
-                    Text("All Recipes").bold().font(.largeTitle).padding(.top, 40)
+                    Text("All Recipes").bold().font(Font.custom("Avenir Heavy", size: 24)).padding(.top, 40)
                     
                     ScrollView
                     {
-                        
                         LazyVStack(alignment: .leading)
                         {
                             ForEach(model.recipes)
                             { recipe in
+                                
                                 NavigationLink(destination: RecipeDetailView(recipe: recipe),
                                 label:
                                 {
                                     HStack(spacing: 20.0)
                                     {
                                         Image(recipe.image).resizable().scaledToFill().clipped().frame(width: 50, height:50, alignment: .center).cornerRadius(10)
-                                        Text(recipe.name).foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                                        
+                                        VStack(alignment: .leading)
+                                        {
+                                            Text(recipe.name).bold().font(Font.custom("Avenir Heavy", size: 16))
+                                            RecipeHighlights(recipe.highlights).font(Font.custom("Avenir Heavy", size: 15))
+
+                                            
+                                        }.foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                                     }
 
                                 })

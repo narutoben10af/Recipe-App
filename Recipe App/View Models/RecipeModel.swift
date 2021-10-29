@@ -10,6 +10,8 @@ import Foundation
 class RecipeModel: ObservableObject
 {
     @Published var recipes = [Recipe]()
+    @Published var categories = Set<String>()
+    @Published var selectedCategory: String?
 //    static var nState = false
 
     init()
@@ -21,6 +23,12 @@ class RecipeModel: ObservableObject
         // Get the data
         self.recipes = DataService.getLocalData()
         
+//        var categoryStringArray =
+        self.categories = Set(self.recipes.map { r in
+                                return r.category
+                              })
+        
+        self.categories.update(with: Constants.defaultlistFilter)
         // Set the recipes property
         
     }

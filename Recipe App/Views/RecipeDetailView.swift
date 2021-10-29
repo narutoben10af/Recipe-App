@@ -10,7 +10,8 @@ import SwiftUI
 struct RecipeDetailView: View
 {
     var recipe: Recipe
-    @State var selectedPortionSize:Int = 1    
+    @State var selectedPortionSize:Int = 1
+
     var body: some View
     {
         GeometryReader

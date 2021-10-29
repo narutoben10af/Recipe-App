@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RecipeTabView: View
 {
-    @State var tabIndex = 2
+    @State var tabIndex = Constants.featuredTab
+//    @State var tabIndex = Constants.defaultlistFilter
 
     var body: some View
     {
@@ -22,7 +23,17 @@ struct RecipeTabView: View
                     Image(systemName: "star")
                     Text("Featured")
                 }
-            }.tag(1)
+            }.tag(Constants.featuredTab)
+            
+            RecipeCategoryView(selectedTab: $tabIndex).tabItem
+            {
+                VStack
+                {
+                    Image(systemName: "square.grid.2x2")
+                    Text("Categories")
+                }
+            }.tag(Constants.categoryTab)
+
             
             RecipeListView().tabItem
             {
@@ -31,7 +42,7 @@ struct RecipeTabView: View
                     Image(systemName: "list.dash")
                     Text("List")
                 }
-            }.tag(2)
+            }.tag(Constants.listTab)
         }.environmentObject(RecipeModel())
     }
 }
